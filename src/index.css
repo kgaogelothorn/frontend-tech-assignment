@@ -86,7 +86,7 @@ main {
   content: url('./chevron.svg'); 
   position: absolute;
   top: 3px;
-  right: -7px;
+  right: -8px;
   transform: translateY(-50%);
   color: white;
   width: 10px;
@@ -108,9 +108,50 @@ main {
   color: #fff;
   opacity: 60%;
   position: absolute;
-  /* width: 60px; */
   text-align: center;
-  min-width: 100px;
+  min-width: 90px;
   width: 100%;
+}
+
+.card {
+  width: 130px;
+  height: auto;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  background-color: #173F4B;
+  text-align: center;
+  position: relative;
+}
+
+
+.card-one::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  left: 40%;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #173F4B transparent transparent transparent;
+}
+
+.card-one::before {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 48%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 14px;
+  background-color: #3C7F90;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.label {
+  padding: 10px 0;
 }
 
