@@ -27,7 +27,6 @@ main {
   width: 100%;
   height: 606px;
   background-color: #215A6B;
-  /* padding: 70px 80px; */
 }
 
 .timeline {
@@ -111,6 +110,7 @@ main {
   text-align: center;
   min-width: 90px;
   width: 100%;
+  padding-top: 8px;
 }
 
 .card {
@@ -152,6 +152,47 @@ main {
 }
 
 .label {
-  padding: 10px 0;
+  padding: 12px 7px;
+}
+
+.card-two::before,
+.card-three::before {
+  content: '';
+  position: absolute;
+  top: -18px;
+  left: 40%;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #173F4B transparent;
+}
+
+.card-two::after,
+.card-three::after {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 48%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 14px;
+  background-color: #3C7F90;
+}
+
+.card-three::before {
+  left: 75%;
+  border-color: transparent transparent #3C7F90 transparent;
+}
+
+.card-three::after {
+  left: 83%;
+}
+
+.card-three {
+  background-color: #3C7F90;
+}
+
+.py-1 {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
 }
 
