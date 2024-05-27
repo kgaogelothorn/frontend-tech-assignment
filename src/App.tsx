@@ -5,46 +5,45 @@ import home from './home.svg';
 import fund from './em-fund.svg';
 import debt from './debt.svg';
 import vision from './vision.svg';
+import chevron from './chevron.svg';
+
+const timelineEvents = [
+  { text: 'You are here', style: {} },
+  { text: 'In 1 year and 9 months', style: { right: '56px' } },
+  { text: 'In 3 years and 2 months', style: { right: '66px' } },
+  { text: 'In 4 years and 9 months', style: { right: '70px' } },
+  { text: 'In 8 years and 11 months', style: { right: '30px' } },
+  { text: 'Ultimately', style: {} }
+];
+
+const cards = [
+  { src: family, alt: "Baby's birth", label: "Baby’s birth", className: 'card-one', style: { left: '160px', top: '56px' } },
+  { src: holiday, alt: "Holiday", label: "Holiday", className: 'card-one', style: { left: '300px', bottom: '78px' } },
+  { src: retire, alt: "Retire", label: "Retire", className: 'card-one', style: { left: '720px', bottom: '212px' } },
+  { src: home, alt: "New home", label: "New home", className: 'card-two', style: { left: '160px', bottom: '74px' } },
+  { src: fund, alt: "Emergency fund", label: "Emergency fund", labelStyle: { paddingTop: '2px', paddingBottom: '2px' },
+  className: 'card-two', style: { left: '447px', bottom: '210px', } },
+  { src: debt, alt: "Debt free", label: "Debt free", className: 'card-two', style: { left: '638px', bottom: '348px' } },
+  { src: vision, alt: "Vision", label: "Make a contribution to my community through philanthropy", className: 'card-three', style: { left: '780px', bottom: '485px' } }
+];
 
 const App = () => (
   <main>
-    <ul className="timeline">
-      <li className="timeline-item"><p>You are <br /> here</p></li>
-      <li className="timeline-item" style={{right: "56px"}}><p>In 1 year and 9 months</p></li>
-      <li className="timeline-item" style={{right: "66px"}}><p>In 3 years and 2 months</p></li>
-      <li className="timeline-item" style={{right: "70px"}}><p>In 4 year and 9 months</p></li>
-      <li className="timeline-item" style={{right: "30px"}}><p>In 8 years and 11 months</p></li>
-      <li className="timeline-item"><p>Ultimately</p></li>
+      <ul className="timeline">
+      {timelineEvents.map((event, index) => (
+        <li key={index} className="timeline-item" style={event.style}>
+          <p>{event.text}</p>
+        </li>
+      ))}
     </ul>
 
-    <div className="card card-one" style={{left: "160px", top: "56px"}}>
-      <img src={family} alt="Baby's birth" />
-      <div className="label">Baby’s birth</div>
-    </div>
-    <div className="card card-one" style={{left: "300px", bottom: "78px"}}>
-      <img src={holiday} alt="Holiday" />
-      <div className="label">Holiday</div>
-    </div>
-    <div className="card card-one" style={{left: "720px", bottom: "212px"}}>
-      <img src={retire} alt="Retire" />
-      <div className="label">Retire</div>
-    </div>
-    <div className="card card-two" style={{left: "160px", bottom: "74px"}}>
-      <img src={home} alt="New home" />
-      <div className="label">New home</div>
-    </div>
-    <div className="card card-two" style={{left: "447px", bottom: "210px"}}>
-      <img src={fund} alt="Emergency fund" />
-      <div className="label py-1">Emergency fund</div>
-    </div>
-    <div className="card card-two" style={{left: "638px", bottom: "348px"}}>
-      <img src={debt} alt="Debt free" />
-      <div className="label">Debt free</div>
-    </div>
-    <div className="card card-three" style={{left: "780px", bottom: "485px"}}>
-      <img src={vision} alt="Vision" />
-      <div className="label">Make a contribution to my community through philantrophy</div>
-    </div>
+    {cards.map((card, index) => (
+      <div key={index} className={`card ${card.className}`} style={card.style}>
+        <img src={card.src} alt={card.alt} />
+        <div className="label" style={card?.labelStyle}>{card.label}</div>
+      </div>
+    ))}
+
   </main>
 );
 
