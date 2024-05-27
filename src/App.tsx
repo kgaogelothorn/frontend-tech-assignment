@@ -1,16 +1,15 @@
-import React from 'react';
-import family from './family.svg';
 
-function App() {
-  return (
-    <main>
-     <div 
-        style={{background: "#173F4B", width: "130px", height: "136px", boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.25)"}}>
-          <img src={family} alt="Family" />
-          <p style={{textAlign: "center"}}>Baby's birth</p>
-     </div>
-    </main>
-  );
-}
+const App = () => (
+  <main>
+    <ul className="timeline">
+      <li className="timeline-item"><p>You are <br /> here</p></li>
+      <li className="timeline-item"><p>in 1 year and 9 months</p></li>
+      <li className="timeline-item"><p>in 3 years and 2 months</p></li>
+      <li className="timeline-item"><p>in 4 year and 9 months</p></li>
+      <li className="timeline-item"><p>in 8 years and 11 months</p></li>
+      <li className="timeline-item"><p>ultimately</p></li>
+    </ul>
+  </main>
+);
 
 export default App;
