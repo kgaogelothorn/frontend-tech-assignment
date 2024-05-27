@@ -124,7 +124,6 @@ main {
   position: relative;
 }
 
-
 .card-one::after {
   content: '';
   position: absolute;
@@ -190,4 +189,3 @@ main {
 .card-three {
   background-color: #3C7F90;
 }
-

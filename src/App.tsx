@@ -5,7 +5,6 @@ import home from './home.svg';
 import fund from './em-fund.svg';
 import debt from './debt.svg';
 import vision from './vision.svg';
-import chevron from './chevron.svg';
 
 const timelineEvents = [
   { text: 'You are here', style: {} },
@@ -43,7 +42,6 @@ const App = () => (
         <div className="label" style={card?.labelStyle}>{card.label}</div>
       </div>
     ))}
-
   </main>
 );
 
